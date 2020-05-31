@@ -1,0 +1,384 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #102746;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1060px;
+  margin: 0 auto;
+}
+
+.container-lg {
+  max-width: 1262px;
+  margin: 0 auto;
+}
+
+.section__title {
+  font-size: 35px;
+  line-height: 42px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.section__title::after {
+  display: block;
+  content: "";
+  width: 253px;
+  height: 3px;
+  background: #006dfe;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+}
+/* Header */
+
+.header {
+  padding-top: 56px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.header_active {
+  padding-bottom: 25px;
+  background: #0e1d28;
+  transition: 0.2s linear;
+  z-index: 10;
+}
+
+.header__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.menu__list {
+  display: flex;
+}
+
+.menu__list li + li {
+  margin-left: 82px;
+}
+.header__link {
+  color: #fff;
+  font-size: 18px;
+}
+
+/* Section intro */
+
+.intro {
+  background: url(../img/header-bg.jpg) no-repeat center;
+  background-size: cover;
+  min-height: 100vh;
+  padding: 263px 0 376px;
+}
+.intro__title {
+  max-width: 619px;
+  font-size: 50px;
+  line-height: 60px;
+  color: #fff;
+  margin-bottom: 22px;
+}
+
+.intro__subtitle {
+  max-width: 546px;
+  color: #fff;
+  margin-bottom: 60px;
+}
+.search-form {
+}
+.search-form__wrap {
+}
+.search-form__info {
+  display: flex;
+  flex-wrap: wrap;
+}
+.seacrh-form__field {
+  width: 297px;
+  background: transparent url(../img/circle-icon.png) no-repeat left 6px;
+  background-size: 20px;
+  border: none;
+  border-bottom: 2px solid #bfc0c5;
+  padding: 0 0 22px 43px;
+  margin-right: 60px;
+  color: #fff;
+  font-size: 18px;
+}
+
+.seacrh-form__field::placeholder {
+  color: #fff;
+}
+
+.search-form__submit {
+  padding: 15px 39px;
+  background: #1b7dff;
+  border: 0;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+/* Benefits section */
+
+.benefits {
+  margin-bottom: 131px;
+}
+
+.benefits-container {
+  background-color: #fff;
+  box-shadow: 0px 2px 20px rgba(21, 24, 36, 0.15993);
+  position: relative;
+}
+.benefits__title {
+  width: 100%;
+  font-size: 35px;
+  line-height: 42px;
+  padding: 93px 100px 88px 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-100%);
+  background: #fff;
+}
+.benefits__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 60px;
+  padding: 32px 100px 0;
+}
+.benefits__card {
+  grid-column: span 1fr;
+  margin-bottom: 111px;
+}
+.benefits__card-pic {
+  max-width: 66px;
+  margin-bottom: 37px;
+}
+.benefits__card-title {
+  font-size: 18px;
+  color: #000;
+  margin-bottom: 26px;
+}
+.benefits__card-desc {
+  color: #000000;
+  margin-bottom: 39px;
+}
+.benefits__card-more {
+  text-transform: uppercase;
+  color: #006dfe;
+  padding-right: 60px;
+  background: url(../img/arrow-icon.svg) no-repeat 95% center;
+  transition: 0.2s all;
+}
+.benefits__card-more:hover {
+  background: url(../img/arrow-icon.svg) no-repeat right center;
+}
+
+/* Places section */
+.places {
+  margin-bottom: 131px;
+}
+
+.places__caption {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 36px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.places__view-all {
+  text-transform: uppercase;
+  color: #006dfe;
+  padding-right: 60px;
+  background: url(../img/arrow-icon.svg) no-repeat right center;
+}
+
+.places__cards {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 10px;
+}
+.places__card {
+  position: relative;
+  overflow: hidden;
+}
+
+.places__card:hover .places__card-pic {
+  transform: scale(1.05);
+}
+
+.places__card::after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgba(21, 24, 36, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+.places__card_size_lg {
+  grid-column: span 3;
+  height: 354px;
+}
+
+.places__card_size_sm {
+  grid-column: span 2;
+  height: 283px;
+}
+
+.places__card-pic {
+  object-fit: cover;
+  width: 100%;
+  transition: 0.2s all;
+}
+.places__card-title {
+  position: absolute;
+  bottom: 27px;
+  left: 29px;
+  color: #fff;
+  z-index: 3;
+  font-size: 50px;
+  line-height: 60px;
+}
+.places__card-link {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 4;
+}
+
+/* Tours section */
+
+.tours {
+  margin-bottom: 139px;
+}
+.tours__tour {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 0 108px;
+  margin-bottom: 77px;
+  align-items: center;
+}
+.tour {
+}
+.tour__pic {
+}
+.tour__thumb {
+}
+.tour__info {
+  padding-left: 47px;
+}
+.tour__title {
+  font-size: 30px;
+  line-height: 40px;
+  margin-bottom: 85px;
+}
+.tour__desc {
+  margin-bottom: 58px;
+}
+.tour__more {
+  color: #006dfe;
+  text-transform: uppercase;
+  padding-right: 60px;
+  background: url(../img/arrow-icon.svg) no-repeat 95% center;
+  transition: 0.2s all;
+}
+.tour__more:hover {
+  background: url(../img/arrow-icon.svg) no-repeat right center;
+}
+
+/* Top section */
+
+.top {
+  margin-bottom: 144px;
+}
+
+.top__title {
+  margin-bottom: 54px;
+}
+
+.top__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 58px 52px;
+}
+.top__card {
+  display: flex;
+  flex-direction: column;
+}
+.top__card-pic {
+  position: relative;
+  margin-bottom: 45px;
+}
+.top__card-thumb {
+}
+
+.top__card-stats {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(21, 24, 36, 0.6);
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 15px 25px;
+  justify-content: flex-end;
+}
+.top__card-title {
+  font-size: 18px;
+  margin-right: auto;
+}
+.top__card-lakes {
+  padding-right: 20px;
+  background: url(../img/heart-icon.svg) no-repeat right center;
+  margin-right: 14px;
+}
+.top__card-likes-value {
+}
+.top__card-comments {
+  padding-right: 23px;
+  background: url(../img/comment-icon.svg) no-repeat right center;
+}
+.top__card-comments-value {
+}
+.top__card-desc {
+  margin-bottom: 31px;
+}
+.top__card-more {
+  text-transform: uppercase;
+  padding: 12px 20px;
+  color: #fff;
+  background: #006dfe;
+  width: 118px;
+  margin: auto 0 0 0;
+}
